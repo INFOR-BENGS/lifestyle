@@ -161,8 +161,6 @@ nav ul li a:hover{
     align-items: center;
 }
 .card{
-    height: 400px;
-    max-height: 450px;
     max-width: 300px;
     background-color: black;
     border-radius: 0px 0px 10px 10px;
