@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
+    background-color: aliceblue;
 }
 header{
     display: flex;
@@ -64,7 +65,7 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: -30px;
+    margin-left: -40px;
     background-color: black;
     height: 90vh;
     display: flex;
@@ -142,8 +143,70 @@ nav ul li a:hover{
 
 /************************************ Contents*************************************/
 .contents{
+    position: absolute;
+    top: 600px;
     min-height: 100vh;
     margin-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 400px;
+    max-height: 450px;
+    max-width: 300px;
+    background-color: black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    margin: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.images{
+    height: 200px;
+    background-color: aqua;
+    background-image: url(images/cerveau.jpg);
+    background-size: cover;
+    margin: 0px;
+}
+.step_card{
+    color: white;
+    padding: 10px;
+}
+.step_card h3{
+    font-weight: bold;
+}
+.step_card p{
+    
+}
+.voir{
+    font-size: 20px;
+    background-color: red;
+    font-family: sans-serif;
+    width: 100px;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.voir:hover{
+    background-color: #fff;
+    color: black;
 }
 
 /************************************ Petits écrans *************************************/
