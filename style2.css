@@ -208,7 +208,7 @@ nav ul li a:hover{
 }
 .voir:hover{
     background-color: #fff;
-    color: black;
+    color: red;
 }
 
 .swiper {
@@ -293,7 +293,120 @@ nav ul li a:hover{
     font-weight: 700;
     margin-left: 2px;
   }
-
+  .videos h4{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 25%;
+    text-align: center;
+    margin: 30px auto auto auto;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .videos h4:hover{
+    background-color: #fff;
+    color: black;
+  }
+/************************************ Footer *************************************/
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+  }
+  
+  footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer li {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #fff;
+  }
+  
+  footer .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(9, 178, 235);
+  }
+  
+  footer form {
+    margin-top: 20px;
+   
+  }
+  
+  footer form label {
+    color: #fff;
+  }
+  
+  footer form .form-control {
+    background-color: #444;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    height: 40px;
+    margin-left: 10px;
+  }
+  footer form .btn {
+    background-color: rgb(9, 178, 235);
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 13px;
+  }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}  
+.col-sm-3{
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.col-sm-3 p{
+    text-align: justify;
+}
+.copyright{
+    margin-bottom: 10px;
+}
+.fab.fa-facebook-f{
+  color: rgb(0, 132, 255);
+}
+.fab.fa-twitter{
+  color: rgb(0, 166, 255);
+}
+.fab.fa-instagram{
+  color: rgb(201, 19, 146);
+}
+.fab.fa-pinterest-p{
+  color: red;
+}
 /************************************ Petits écrans *************************************/
 @media screen and (max-width: 785px){
     .logo{
