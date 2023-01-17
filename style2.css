@@ -150,6 +150,7 @@ nav ul li a:hover{
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding: 0px;
 }
 .cards{
@@ -166,9 +167,11 @@ nav ul li a:hover{
     border-radius: 0px 0px 10px 10px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     margin: 20px;
+    cursor: pointer;
     transition: 0.5s ease;
     cursor: pointer;
 }
+
 .card:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
@@ -201,11 +204,95 @@ nav ul li a:hover{
     margin: auto;
     transition: 0.5s;
     cursor: pointer;
+    border-radius: 5px;
 }
 .voir:hover{
     background-color: #fff;
     color: black;
 }
+
+.swiper {
+    width: 100%;
+    height: 460px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 0;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.3), #820b0bd9), url("images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .swiper h2{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    font-family: 'Libre Baskerville', serif;
+  }
+  .swiper-wrapper{
+   
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-pagination-bullet{
+    
+  }
+  .videos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+  }
+  .section{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin: 20px;
+  }
+  .section h3{
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .vid{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  video{
+    width: 100%;
+  }
+  .icone{
+    margin-top: 20px;
+    margin-left: 2px;
+  }
+  .like, .dislike, .comments{
+    color: white;
+    font-weight: lighter;
+    font-size: 15px;
+    margin: 5px;
+  }
+  .vid h5{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 2px;
+  }
 
 /************************************ Petits écrans *************************************/
 @media screen and (max-width: 785px){
