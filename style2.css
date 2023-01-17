@@ -152,6 +152,7 @@ nav ul li a:hover{
     justify-content: center;
     flex-direction: column;
     padding: 0px;
+    z-index: 3;
 }
 .cards{
     display: flex;
