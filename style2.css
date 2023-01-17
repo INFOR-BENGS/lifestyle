@@ -54,11 +54,10 @@ nav ul li a:hover{
 .nav{
     position: fixed;
     top: 50px;
-    z-index: 2;
+    z-index: 4;
     bottom: 100px;
     width: 100%;
-    
-    
+    display: none;
 }
 .nav ul{
     position: fixed;
@@ -428,6 +427,9 @@ nav ul li a:hover{
     }
     nav{
         display: none;
+    }
+    .nav{
+        display: block;
     }
     .nav ul{
         display: block;
