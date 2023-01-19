@@ -197,11 +197,11 @@ nav ul li a:hover{
 }
 .voir{
     font-size: 20px;
+    padding: 5px;
     background-color: red;
     font-family: sans-serif;
     width: 100px;
     color: #fff;
-    font-weight: 600;
     display: block;
     margin: auto;
     transition: 0.5s;
