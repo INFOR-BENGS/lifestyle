@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lifestyle</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+       />
+       <script src="https://kit.fontawesome.com/c8d91cbfa8.js" crossorigin="anonymous"></script>
+
+       <style>
+         body{
+            padding: 0;
+            margin: 0;
+        }
+        .contents{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: rgb(251,63,63);
+            background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(57,54,54,1) 100%);
+        }
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 400px;
+            height: 400px;
+            justify-content: space-around;
+            background-color: aliceblue;
+            padding: 30px 30px 0px 30px;
+        }
+        input{
+            padding: 10px;
+            border: 1px red solid;
+            outline: none;
+        }
+        form h1{
+            text-align: center;
+            font-family: sans-serif;
+            color: red;
+        }
+        .forgot{
+            margin: 0px 0px 0px auto;
+            opacity: 0.8;
+            cursor: pointer;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: red;
+        }
+        .forgot:hover{
+            color: rgb(6, 152, 237);
+        }
+        button{
+            width: 150px;
+            border: none;
+            padding: 8px;
+            background-color: red;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 20px;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: black;
+        }
+        .inscription{
+            font-size: 16px;
+            margin: 50px auto 0px auto;
+        }
+       a{
+        text-decoration: none;
+        color: rgb(20, 124, 215);
+        font-weight: 400;
+       }
+       a:hover{
+        color: red;
+       }
+       </style>
+    </head>
+
+    <body>
+        <div class="contents">
+            <form action="" method="post">
+                <h1>Connexion</h1>
+                <input type="text" placeholder="Nom d'utilisateur" class="names" name="names">
+                <input type="password" placeholder="Mot de passe" class="password" name="password">
+                <div class="forgot">Nomd'utilisateur/ Mot de passe oublié</div>
+                <button>Se connecter</button>
+                <div class="inscription">
+                    <span>Pas encore membre?</span>
+                    <a href="#">Inscrivez-vous</a></div>
+            </form>
+        </div>
+    </body>
+
+</html>
