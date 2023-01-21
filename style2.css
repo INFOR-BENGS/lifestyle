@@ -197,6 +197,7 @@ nav ul li a:hover{
 }
 .voir{
   background-color: black;
+  border: none;
   width: 100px;
   display: block;
   margin: auto;
