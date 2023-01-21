@@ -196,21 +196,31 @@ nav ul li a:hover{
     
 }
 .voir{
-    font-size: 20px;
-    padding: 5px;
-    background-color: red;
-    font-family: sans-serif;
-    width: 100px;
-    color: #fff;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: black;
+  width: 100px;
+  display: block;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
-.voir:hover{
-    background-color: #fff;
-    color: black;
+.voir a{
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: red;
+  padding: 5px;
+  font-family: sans-serif;
+  color: #fff;
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.voir a:hover{
+  color: black;
+  background-color: #fff;
 }
 
 .swiper {
