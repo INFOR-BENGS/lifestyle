@@ -111,12 +111,19 @@
             right: 0;
             bottom: 0;
             z-index: -1;
+            width: auto;
+            height: auto;
         }
         @media screen and (max-width: 645px){
         form{
             width: 300px;
             height: 450px;
         }
+       }
+       @media screen and (max-width: 700px){
+         .backvideo{
+            display: none;
+         }
        }
         @media screen and (min-aspect-ratio: 16/9){
             .backvideo{
