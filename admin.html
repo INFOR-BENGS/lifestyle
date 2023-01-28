@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lifestyle</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+       />
+       <script src="https://kit.fontawesome.com/c8d91cbfa8.js" crossorigin="anonymous"></script>
+
+       <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: aliceblue;
+        }
+        .contents{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        section{
+           
+        }
+        .settings{
+            width: 25%;
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+        }
+        .settings h3{
+            margin: 0;
+            background-color: aliceblue;
+            color: black;
+            font-size: 18px;
+            text-align: center;
+            padding: 5px 0px 5px 5px;
+            font-family: sans-serif;
+        }
+        .page{
+            width: 75%;
+            background: aliceblue;
+            display: flex;
+            flex-direction: column;
+        }
+        .welcome-admin{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 0px 30px;
+            align-items: center;
+        }
+        .welcome-admin h2, h1{
+            font-family: sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .welcome-admin h1{
+            font-size: 30px;
+        }
+        .pannel{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: -30px;
+            padding: 0px 50px 50px 50px;
+        }
+        button{
+           margin-top: 20px;
+           border: none;
+           font-weight: bold;
+           background-color: red;
+           padding: 10px;
+           font-size: 16px;
+           color: aliceblue;
+           cursor: pointer;
+           transition: 0.5s ease;
+        }
+        button:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+        .content{
+            width: 230px;
+            height: 200px;
+            margin: 50px;
+        }
+        .content h2{
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+        .content .img{
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 75%;
+        }
+        .admins .img{
+            background-image: url('images/cerveau.jpg');
+        }
+        .clients .img{
+            background-image: url('images/cerveau.jpg');
+        }
+        .posts .img{
+            background-image: url('images/cerveau.jpg');
+        }
+        .formations .img{
+            background-image: url('images/cerveau.jpg');            
+        }
+        .admin-profil{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px auto;
+            width: 100%;
+            background-image: linear-gradient(red, black);
+           
+        }
+        .admin-name{
+            margin: 20px 0px;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .admin-picture{
+            background-image: url(images/cerveau.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px red;
+            margin-top: 20px;
+        }
+        .tools{
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+        .liens{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px auto;
+        }
+        .liens a{
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            text-decoration: none;
+            color: aliceblue;
+            margin: 30px 0px;
+            transition: 0.5s ease;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .liens a:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+       </style>
+    </head>
+
+    <body>
+        <div class="contents">
+            <section class="settings">
+                <div class="admin-profil">
+                    <div class="admin-picture"></div>
+                    <span class="admin-name">Infor Bengs</span>
+                </div>
+                <div class="tools">
+                    <h3>Settings</h3>
+                    <div class="liens">
+                        <a href="#">Profil</a>
+                        <a href="#">Admins</a>
+                        <a href="#">Utilisateurs</a>
+                        <a href="#">Articles</a>
+                        <a href="#">Formations</a>
+                        <a href="#">Messages</a>
+                    </div>
+                </div>
+            </section>
+            <section class="page">
+                <div class="welcome-admin">
+                    <h1 class="logo" translate="no"><span style="color: red;">Life</span>style</h1>
+                    <h2>Welcome <span style="color: red;">Bengs</span></h1>
+                </div>
+
+                <div class="pannel">
+                    <div class="content admins">
+                        <h2>Admins</h2>
+                        <div class="img"></div>
+                        <div class="button">
+                            <button>Ajouter</button>
+                            <button>Modifier</button>
+                        </div>
+                    </div>
+
+                    <div class="content clients">
+                        <h2>Clients</h2>
+                        <div class="img"></div>
+                        <div class="button">
+                            <button>Ajouter</button>
+                            <button>Modifier</button>
+                        </div>
+                    </div>
+
+                    <div class="content posts">
+                        <h2>Posts</h2>
+                        <div class="img"></div>
+                        <div class="button">
+                            <button>Ajouter</button>
+                            <button>Modifier</button>
+                        </div>
+                    </div>
+
+                    <div class="content formations">
+                        <h2>Formations</h2>
+                        <div class="img"></div>
+                        <div class="button">
+                            <button>Ajouter</button>
+                            <button>Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
