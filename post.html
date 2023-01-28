@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>lifestyle</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+       />
+       <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .contents{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+        }
+        .banner{
+            background-image: url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px;
+        }
+        .big-content{
+            width: 80%;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+        .title{
+            text-align: center;
+            width: 100%;
+            font-size: 50px;
+            padding: 20px 0px;
+            font-weight: bold;
+            color: aliceblue;
+            background-color: red;
+        }
+        video{
+            width: 90%;
+            height: 300px;
+            margin: 50px 0px 0px 0px;
+        }
+        .content{
+            color: aliceblue;
+            font-size: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            margin: 30px 0px 0px 0px;
+        }
+        p{
+            margin-top: -15px;
+        }
+        @media screen and (max-width: 785px){
+            video{
+                margin: 10px 0px -40px 0px;
+            }
+        }
+        @media screen and (max-width: 510px){
+            video{
+                margin: -20px 0px -80px 0px;
+            }
+        }
+       </style>
+    </head>
+
+    <body>
+        <div class="contents">
+            <div class="banner"></div>
+            <div class="big-content">
+                <div class="title">How to create a website?</div>
+                <video src="videos/video1.mp4" poster=""></video>
+                <div class="content">
+                    <p>
+                        <h2>First part</h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nibh ac nibh vehicula condimentum. Nam vitae pretium nunc. Phasellus sed interdum dui, et blandit nulla. Vivamus vestibulum ipsum vel ullamcorper facilisis. Nullam aliquet sapien augue, quis porta leo eleifend sed. Fusce justo arcu, dignissim sed nisi at, rhoncus aliquet tortor. Ut augue nisl, dapibus a ante sit amet, bibendum hendrerit neque.
+                        <img src="images/bien.jpg" alt="">
+                    </p>
+
+                    <p>
+                        <h2>Second part</h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nibh ac nibh vehicula condimentum. Nam vitae pretium nunc. Phasellus sed interdum dui, et blandit nulla. Vivamus vestibulum ipsum vel ullamcorper facilisis. Nullam aliquet sapien augue, quis porta leo eleifend sed. Fusce justo arcu, dignissim sed nisi at, rhoncus aliquet tortor. Ut augue nisl, dapibus a ante sit amet, bibendum hendrerit neque.
+                    </p>
+
+                    <p>
+                        <h2>Last part</h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nibh ac nibh vehicula condimentum. Nam vitae pretium nunc. Phasellus sed interdum dui, et blandit nulla. Vivamus vestibulum ipsum vel ullamcorper facilisis. Nullam aliquet sapien augue, quis porta leo eleifend sed. Fusce justo arcu, dignissim sed nisi at, rhoncus aliquet tortor. Ut augue nisl, dapibus a ante sit amet, bibendum hendrerit neque.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
