@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             background-color: aliceblue;
+            font-family: sans-serif;
         }
         .banner{
             background-image: url('images/banner.jpg');
@@ -53,6 +54,7 @@
         }
         .content{
             color: aliceblue;
+            opacity: 1;
             font-size: 20px;
             padding: 40px;
             display: flex;
@@ -70,6 +72,11 @@
         @media screen and (max-width: 785px){
             video{
                 margin: 10px 0px -40px 0px;
+            }
+        }
+        @media screen and (max-width: 645px){
+            .big-content{
+                width: 100%;
             }
         }
         @media screen and (max-width: 510px){
