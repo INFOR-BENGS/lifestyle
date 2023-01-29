@@ -69,6 +69,51 @@
         p{
             margin-top: -15px;
         }
+        .comments{
+            background-color: aliceblue;
+            width: 100%;
+            padding: 0px 0px 20px 0px;
+        }
+        .comments h2{
+            background-color: rgba(170, 222, 244, 0.877);
+            margin: 0;
+            padding: 10px 0px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .posting{
+            display: flex;
+            flex-direction: column;
+            padding: 0px 10px;
+        }
+        input, textarea{
+            margin: 15px 0px;
+            outline: none;
+        }
+        .pseudo{
+            width: 25%;
+            padding: 10px;
+        }
+        #s-comment{
+            width: 50%;
+            height: 50px;
+            max-height: 55px;
+            max-width: 500px²;
+        }
+        button{
+            width: 150px;
+            border: none;
+            padding: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgba(170, 222, 244, 0.877);
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: black;
+            color: aliceblue;
+        }
         @media screen and (max-width: 785px){
             video{
                 margin: 10px 0px -40px 0px;
@@ -109,6 +154,15 @@
                         <h2>Last part</h2>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae nibh ac nibh vehicula condimentum. Nam vitae pretium nunc. Phasellus sed interdum dui, et blandit nulla. Vivamus vestibulum ipsum vel ullamcorper facilisis. Nullam aliquet sapien augue, quis porta leo eleifend sed. Fusce justo arcu, dignissim sed nisi at, rhoncus aliquet tortor. Ut augue nisl, dapibus a ante sit amet, bibendum hendrerit neque.
                     </p>
+                </div>
+                <div class="comments">
+                    <h2>Commentaires</h2>
+                    <div class="posting">
+                        <input type="text" placeholder="Pseudo" name="pseudo" class="pseudo">
+                        <textarea name="s-comment" id="s-comment" cols="30" rows="10" placeholder="Saisissez votre commentaire"></textarea>
+                        <button>Poster</button>
+                    </div>
+
                 </div>
             </div>
         </div>
