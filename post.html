@@ -101,6 +101,7 @@
             padding: 5px 10px;
             border-radius: 20px;
             border: 1px rgba(29, 28, 28, 0.582) solid;
+            margin-top: 20px;
         }
         .com{
             display: flex;
@@ -132,6 +133,38 @@
             max-height: 55px;
             border-right: none;
             border-radius: 20px 0px 0px 20px;
+        }
+        .post-comment{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+           
+        }
+        .poster{
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(170, 222, 244, 0.877);
+            width: 200px;
+        }
+        .poster h3{
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px aliceblue solid;
+            padding: 5px;
+            margin-top: 0px;
+        }
+        .post-comment .post{
+            padding-left: 20px;
+        }
+        .date{
+            margin-top: -19px;
+            padding: 5px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.717);
+            color: aliceblue;
+
         }
         @media screen and (max-width: 785px){
             video{
@@ -181,6 +214,22 @@
                         <div class="com">
                             <input type="text" name="s-comment" class="s-comment" placeholder="Saisissez votre commentaire">
                             <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                        </div>
+                        <div class="post-comments">
+                            <div class="post-comment">
+                                <div class="poster">
+                                    <h3>Infor Bengs</h3>
+                                    <span class="date">date</span>
+                                </div>
+                                <div class="post">This is an useless comment</div>
+                            </div>
+                            <div class="post-comment">
+                                <div class="poster">
+                                    <h3>Infor Bengs</h3>
+                                    <span class="date">date</span>
+                                </div>
+                                <div class="post">This is an useless comment</div>
+                            </div>
                         </div>
                         
                     </div>
