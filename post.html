@@ -7,6 +7,7 @@
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
        />
+       <script src="https://kit.fontawesome.com/c8d91cbfa8.js" crossorigin="anonymous"></script>
        <style>
         body{
             margin: 0;
@@ -86,33 +87,51 @@
             flex-direction: column;
             padding: 0px 10px;
         }
-        input, textarea{
-            margin: 15px 0px;
+        input{
+            margin: 10px 0px;
             outline: none;
+            border-radius: 20px ;
+            border: 1px rgba(170, 222, 244, 0.877) solid;
+        }
+        input::placeholder{
+          
         }
         .pseudo{
-            width: 25%;
-            padding: 10px;
-        }
-        #s-comment{
-            width: 50%;
-            height: 50px;
-            max-height: 55px;
-            max-width: 500px²;
-        }
-        button{
             width: 150px;
-            border: none;
-            padding: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: rgba(170, 222, 244, 0.877);
-            transition: 0.5s ease;
-            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px rgba(29, 28, 28, 0.582) solid;
         }
-        button:hover{
+        .com{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .fa-paper-plane{
+            background-color: rgba(170, 222, 244, 0.877);
+            border-radius: 0px 20px 20px 0px;
+            font-size: 20px;
+            width: 40px;
+            padding: 8px 8px 8px 12px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .fa-paper-plane:hover{
             background-color: black;
             color: aliceblue;
+        }
+        .s-comment{
+            padding: 5px 10px;
+            width: 100%;
+            max-width: 970px;
+            height: 25px;
+            max-height: 26px;
+            min-height: 25px;
+            display: flex;
+            justify-content: center;
+            max-height: 55px;
+            border-right: none;
+            border-radius: 20px 0px 0px 20px;
         }
         @media screen and (max-width: 785px){
             video{
@@ -158,9 +177,12 @@
                 <div class="comments">
                     <h2>Commentaires</h2>
                     <div class="posting">
-                        <input type="text" placeholder="Pseudo" name="pseudo" class="pseudo">
-                        <textarea name="s-comment" id="s-comment" cols="30" rows="10" placeholder="Saisissez votre commentaire"></textarea>
-                        <button>Poster</button>
+                        <input type="text" placeholder="Pseudo" name="pseudo" class="pseudo" required>
+                        <div class="com">
+                            <input type="text" name="s-comment" class="s-comment" placeholder="Saisissez votre commentaire">
+                            <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                        </div>
+                        
                     </div>
 
                 </div>
