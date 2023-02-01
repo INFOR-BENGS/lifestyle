@@ -65,10 +65,12 @@
         }
         .pannel{
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            margin-top: -30px;
+            margin-top: auto 0px;
+            margin-top: 30px;
             padding: 0px 50px 50px 50px;
         }
         button{
@@ -165,6 +167,35 @@
             background-color: aliceblue;
             color: black;
         }
+
+        .profil-image{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url("images/default-profil.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        .profil-image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .pannel label{
+            font-weight: bold;
+            font-size: 18px;
+            font-family: sans-serif;
+            margin: 10px 0px;
+        }
+        .profil-im{
+           font-size: 18px;
+           margin: 10px 0px;
+        }
+        .input{
+            width: 350px;
+            padding: 5px;
+            margin: 10px 0px;
+        }
        </style>
     </head>
 
@@ -194,43 +225,39 @@
                 </div>
 
                 <div class="pannel">
-                    <div class="content admins">
-                        <h2>Admins</h2>
-                        <div class="img"></div>
-                        <div class="button">
-                            <button>Ajouter</button>
-                            <button>Modifier</button>
-                        </div>
+                    <div class="profil-image">
+                        <img src="images/cerveau.jpg" alt="" class="prof-img">
                     </div>
-
-                    <div class="content clients">
-                        <h2>Clients</h2>
-                        <div class="img"></div>
-                        <div class="button">
-                            <button>Ajouter</button>
-                            <button>Modifier</button>
-                        </div>
-                    </div>
-
-                    <div class="content posts">
-                        <h2>Posts</h2>
-                        <div class="img"></div>
-                        <div class="button">
-                            <button>Ajouter</button>
-                            <button>Modifier</button>
-                        </div>
-                    </div>
-
-                    <div class="content formations">
-                        <h2>Formations</h2>
-                        <div class="img"></div>
-                        <div class="button">
-                            <button>Ajouter</button>
-                            <button>Modifier</button>
-                        </div>
-                    </div>
+                    <label for="profil-im" class="upload">Choisissez une nouvelle photo de profil</label>
+                    <input type="file" name="profil-im" class="profil-im">
+                    <input type="text" class=" input username" placeholder="Modifiez votre nom d'utilisateur">
+                    <input type="password" class="input password" placeholder="Nouveau mot de passe">
+                    <input type="password" class="input password" placeholder="Saississez une seconde fois">
+                    <button>Enregistrer les modifications</button>
+                </div>
                 </div>
             </section>
         </div>
+
+        <script>
+            const imgDiv = document.querySelector('.profil-image');
+            const img = document.querySelector('.prof-img');
+            const file = document.querySelector('.profil-im');
+            const uploadbtn = document.querySelector('.upload');
+
+            file.addEventListener('change', function(){
+                const choosedFile = this.files[0];
+                if (choosedFile){
+                    const reader = new FileReader();
+
+                    reader.addEventListener('load', function(){
+                        img.setAttribute('src', reader.result);
+                    });
+                    reader.readAsDataURL(choosedFile);
+                }
+            });
+
+
+        </script>
     </body>
 </html>
