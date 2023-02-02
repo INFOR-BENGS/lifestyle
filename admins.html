@@ -66,9 +66,10 @@
         .pannel{
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: baseline;
             justify-content: center;
-            margin-top: -30px;
+            flex-direction: row;
+            margin-top: 0px;
             padding: 0px 50px 50px 50px;
         }
         button{
@@ -83,8 +84,8 @@
            transition: 0.5s ease;
         }
         button:hover{
-            background-color: aliceblue;
-            color: black;
+            background-color: black;
+            color: aliceblue;
         }
         .content{
             width: 230px;
@@ -165,6 +166,69 @@
             background-color: aliceblue;
             color: black;
         }
+        .active{
+            color: black;
+            background-color: rgba(240, 248, 255, 0.505);
+        }
+        .add-admin{
+            display: flex;
+            flex-direction: column;
+        }
+        .add-admin form{
+            display: flex;
+            flex-direction: column;
+        }
+        .admin{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: rgb(5, 5, 5);
+            margin: 10px 0px;
+        }
+        .admin span{
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+        span h3{
+            margin: 0px 3px;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            font-size: 16px;
+        }
+        .admin a{
+            font-family: sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: red;
+            padding: 10px;
+            font-size: 16px;
+            margin: 0px 0px 0px 50px;
+            color: aliceblue;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .admin a:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+        .pan-content{
+            margin: 0px 80px;
+        }
+        .admins{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .admins h2, .add-admin h2{
+            font-family: sans-serif;
+        }
+        form input{
+            padding: 10px;
+            margin: 10px 0px;
+        }
        </style>
     </head>
 
@@ -179,7 +243,7 @@
                     <h3>Settings</h3>
                     <div class="liens">
                         <a href="profil.html">Profil</a>
-                        <a href="admins.html">Admins</a>
+                        <a href="admins.html" class="active">Admins</a>
                         <a href="users.html">Utilisateurs</a>
                         <a href="articles.html">Articles</a>
                         <a href="formations.html">Formations</a>
@@ -194,7 +258,35 @@
                 </div>
 
                 <div class="pannel">
+                    <div class="pan-content add-admin">
+                        <h2>Ajouter un nouvel admin</h2>
+                        <form action="">
+                            <input type="text" placeholder="Prenom">
+                            <input type="text" placeholder="Nom">
+                            <input type="text" placeholder="Nom d'utilisateur">
+                            <input type="mail" placeholder="Adresse mail">
+                            <input type="password" placeholder="Mot de passe">
+                            <button>Ajouter</button>
+                        </form>
+                    </div>
+                    <div class="pan-content admins">
+                        <h2>Admins</h2>
+                        <div class="admin">
+                            <span>
+                                <h3>Infor</h3>
+                                <h3>Bengs</h3>
+                            </span>
+                            <a href="#">Modifier</a>
+                        </div>
 
+                        <div class="admin">
+                            <span>
+                                <h3>Infor</h3>
+                                <h3>Bengs</h3>
+                            </span>
+                            <a href="#">Modifier</a>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </section>
