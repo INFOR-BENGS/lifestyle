@@ -40,7 +40,7 @@
             padding: 5px 0px 5px 5px;
             font-family: sans-serif;
         }
-        .page{
+        #page{
             width: 75%;
             background: aliceblue;
             display: flex;
@@ -66,10 +66,41 @@
         .pannel{
             display: flex;
             flex-wrap: wrap;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 0px;
             padding: 0px 50px 50px 50px;
+        }
+        nav{
+            background-color: red;
+            margin-bottom: -20px ;
+            width: 100%;
+            margin-top: 0px;
+        }
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 10px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            font-family: sans-serif;
+            transition: 0.5s ease;
+        }
+        nav ul li a:hover{
+            background-color: rgba(240, 248, 255, 0.701);
+            color: black;
         }
         button{
            margin-top: 20px;
@@ -173,8 +204,8 @@
             width: 300px;
             height: 300px;
             max-height: 300px;
-            background-color: rgba(50, 47, 47, 0.984);
-            box-shadow: 5px 5px 5px rgba(222, 18, 18, 0.799);
+            background-color: rgba(9, 9, 9, 0.973);
+            box-shadow: 5px 5px 5px rgba(222, 18, 18, 0.943);
             color: aliceblue;
             margin: 20px 20px;
             display: flex;
@@ -223,6 +254,84 @@
         .modif:hover{
             background-color: rgba(240, 248, 255, 0.712);
         }
+        .categorie{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .categorie h3{
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .categorie h4{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+            background-color: red;
+            color: aliceblue;
+            width: 100px;
+            padding: 5px;
+            margin: 20px auto;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        .categorie h4:hover{
+            background-color: black;
+        }
+        .categorie h4 a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .articles{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+        form h3{
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        form input, textarea{
+            padding: 10px;
+            margin: 5px 0px;
+            max-width: 100pw;
+            outline: none;
+        }
+        textarea{
+            margin-top: 20px;
+            max-width: 615px;
+        }
+        form input[type=file]{
+            padding: 0px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: sans-serif;
+        }
+        .title{
+            width: 290px;
+        }
+        .select{
+            padding: 10px;
+            width: 315px;
+            margin: 10px 0px;
+            outline: none;
+        }
        
        </style>
     </head>
@@ -246,67 +355,176 @@
                     </div>
                 </div>
             </section>
-            <section class="page">
+            <section id="page">
                 <div class="welcome-admin">
                     <h1 class="logo" translate="no"><span style="color: red;">Life</span>style</h1>
                     <h2>Welcome <span style="color: red;">Bengs</span></h1>
                 </div>
 
                 <div class="pannel">
-                    <div class="article">
-                        <div class="image">
-                            <img src="images/admin.jpg" alt="">
+                    <nav>
+                        <ul>
+                            <li><a href="#livres">Livres</a></li>
+                            <li><a href="#sante">Santé</a></li>
+                            <li><a href="#spiritualite">Spiritualité</a></li>
+                            <li><a href="#dev-perso">développement personnel</a></li>
+                        </ul>
+                    </nav>
+
+                    <form action="" method="post">
+                        <h3>Poster un nouvel article</h3>
+                        <input type="text" placeholder="Titre de l'article" class="title">
+                        <label for="select">Choisissez la catégorie</label>
+                        <select name="select" class="select">
+                            <option>Livres</option>
+                            <option>Santé</option>
+                            <option>Spiritualité</option>
+                            <option>Développement personnel</option>
+                        </select>
+                        <label for="banner">Choisissez votre bannière</label>
+                        <input type="file" name="banner" class="banner">
+                        <label for="banner">Choisissez la vidéo</label>
+                        <input type="file" name="video" class="video">
+                        <textarea name="post-content" id="post-content" cols="30" rows="10" placeholder="Contenu de l'article"></textarea>
+                        <button>Poster</button>
+                    </form>
+                    
+                    <div class="categorie livres">
+                        <h3 id="livres">Livres</h3>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/admin.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
+        
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/apprendre.jpeg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2>Titre du contenu</h2>
-                            <span>date de publication</span>
-                        </div>
-                        <div class="buttons">
-                            <a href="#" class="supp">Supprimer</a>
-                            <a href="#" class="modif">Modifier</a>
-                        </div>
+                        <h4><a href="#page">Haut de page</a></h4>
                     </div>
 
-                    <div class="article">
-                        <div class="image">
-                            <img src="images/apprendre.jpeg" alt="">
+                    <div class="categorie sante">
+                        <h3 id="sante">Santé</h3>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/admin.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
+        
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/apprendre.jpeg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2>Titre du contenu</h2>
-                            <span>date de publication</span>
-                        </div>
-                        <div class="buttons">
-                            <a href="#" class="supp">Supprimer</a>
-                            <a href="#" class="modif">Modifier</a>
-                        </div>
+                        <h4><a href="#page">Haut de page</a></h4>
                     </div>
 
-                    <div class="article">
-                        <div class="image">
-                            <img src="images/achats.jpg" alt="">
+                    <div class="categorie spiritualite">
+                        <h3 id="spiritualite">Spiritualité</h3>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/admin.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
+        
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/apprendre.jpeg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2>Titre du contenu</h2>
-                            <span>date de publication</span>
-                        </div>
-                        <div class="buttons">
-                            <a href="#" class="supp">Supprimer</a>
-                            <a href="#" class="modif">Modifier</a>
-                        </div>
+                        <h4><a href="#page">Haut de page</a></h4>
                     </div>
 
-                    <div class="article">
-                        <div class="image">
-                            <img src="images/etudiant.jpg" alt="">
+                    <div class="categorie dev-perso">
+                        <h3 id="dev-perso">Développement personnel</h3>
+                        <div class="articles">
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/admin.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
+        
+                            <div class="article">
+                                <div class="image">
+                                    <img src="images/apprendre.jpeg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h2>Titre du contenu</h2>
+                                    <span>date de publication</span>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="supp">Supprimer</a>
+                                    <a href="#" class="modif">Modifier</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h2>Titre du contenu</h2>
-                            <span>date de publication</span>
-                        </div>
-                        <div class="buttons">
-                            <a href="#" class="supp">Supprimer</a>
-                            <a href="#" class="modif">Modifier</a>
-                        </div>
+                        <h4><a href="#page">Haut de page</a></h4>
+                    </div>
+
                     </div>
                 </div>
                
